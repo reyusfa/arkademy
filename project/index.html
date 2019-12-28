@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ARKADEMY COFFE SHOP</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="./src/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="nav">
+      <div class="nav-content">
+        <div class="nav-left">
+          <span class="nav-logo">
+            <img src="https://www.arkademy.com/img/logo%20arkademy-01.9c1222ba.png" alt="logo arkademy" style="height: 30px;" />
+          </span>
+          <span class="nav-title">
+            <strong style="color: palevioletred;">ARKADEMY</strong> COFFE SHOP</span>
+        </div>
+        <div class="nav-right">
+          <a href="" class="nav-button">ADD</a>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <table>
+        <tr>
+          <th>No</th>
+          <th>Cashier</th>
+          <th>Product</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+        <tbody id="data">
+        </tbody>
+      </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/2.0.4/dexie.min.js"></script>
+    <script src="./src/indexeddb.js"></script>
+  </body>
+</html>
