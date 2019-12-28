@@ -1,6 +1,20 @@
 const DB_NAME = 'coffe_shop';
 const DB_VERSION = 3;
 
+alasql('CREATE INDEXEDDB DATABASE IF NOT EXISTS ' + DB_NAME + ';', [], function() {
+  console.log('Database "' + DB_NAME + '" created!');
+});
+
+alasql('ATTACH INDEXEDDB DATABASE ' + DB_NAME + '; \
+USE ' + DB_NAME + ';', [], function() {
+  console.log('Database "' + DB_NAME + '" connected!');
+});
+
+alasql('ATTACH INDEXEDDB DATABASE ' + DB_NAME + '; \
+CREATE TABLE IF NOT EXISTS product (id INT, name STRING, price INT, id_category INT, id_cashier INT);', [], function() {
+  console.log('Table product created!');
+});
+
 // create new database
 //var db = new Dexie(DB_NAME);
 
